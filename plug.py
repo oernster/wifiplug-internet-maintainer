@@ -10,13 +10,8 @@ from colorama import init, Fore
 
 init()
 
-def ping():    
-    hostname = "google.com"
-    response = os.system("ping -c 1 " + hostname)
-    if response == 0:
-        return True
-    else:
-        return False
+def ping():
+    return not os.system('ping %s -n 1' % ('google.com',))
 
 
 class WiFiPlug(object):
