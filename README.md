@@ -1,4 +1,4 @@
-# wifiplug_internet_maintainer
+# wifiplug_internet_maintainer v1.2.0
 Polls the internet for alive status and if not cycles a tp-link kasa plug
 
 If internet is down, cycle the power to the router (waiting 20 seconds between off and on statuses).  
