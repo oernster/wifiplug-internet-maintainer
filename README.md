@@ -4,6 +4,8 @@ Polls the internet for alive status and if not cycles a tp-link kasa plug
 If internet is down, cycle the power to the router (waiting 20 seconds between off and on statuses).  
 Increases poll times until 2 hours then sticks at 2 hours until recovery.
 
+The IP address for the WiFi plug needs to be defined.  This is set in settings.json.  Settings.json must be located in the same directory as the main program.
+
 # Windows setup
 If you want to bundle this into an executable, do the following:
 
