@@ -11,7 +11,7 @@ If you want to bundle this into an executable, do the following:
 
 Firstly install Python 3 from python.org. I used Python 3.9.7 but I strongly suspect earlier versions as long as they are at least a fairly recent version of Python 3 would be fine. Install virtualenv (googleable). Clone the repo. Navigate to the repo directory. run 'virtualenv venv' run 'venv\Scripts\activate' run 'pip install -r requirements.txt' run 'pyinstaller plug.py'
 
-This will create a dist directory in your repo directory. Copy the config.json file into the '\dist\MinimiseAppsOnStartup' directory. Copy the entirety of the plug directory contained within the dist directory (not dist itself) into c:\program files (x86) (you may need to have admin priviledges for this operation).
+This will create a dist directory in your repo directory. Copy the settings.json file into the '\dist\plug' directory. Copy the entirety of the plug directory contained within the dist directory (not dist itself) into c:\program files (x86) (you may need to have admin priviledges for this operation).
 
 Press windows key + r and type in 'shell:startup' Insert all programs not already integrated into windows 11's personalisation control panel settings that you want as shortcuts. Create a shortcut for the target 'c:\program files (x86)\plug\plug.exe' and put it in the shell:startup directory.
 
