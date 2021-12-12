@@ -1,4 +1,6 @@
 import subprocess
+import json
+import sys
 from time import sleep
 
 import os
@@ -19,7 +21,6 @@ def ping():
 
 class WiFiPlug(object):
     def __init__(self):
-        self.IPAddress = '10.0.0.17'
         self.fail_timeouts = {
             1: 300, # 5 mins
             2: 600, # 10 mins
@@ -29,13 +30,22 @@ class WiFiPlug(object):
             6: 7200, # 2 hours
         }
         self.fail_count = 0
+        self.load_settings()
         
+    def load_settings(self):
+        try:
+            with open('settings.json', 'r') as f:
+                self.settings = json.loads(f.read())
+        except:
+            print(Fore.RED, "settings.json file not found!")
+            sys.exit()
+
     def off(self):
-        args = ['kasa', '--host', self.IPAddress, '--plug', 'off',]
+        args = ['kasa', '--host', self.settings['WiFiPlugIPAddress'], '--plug', 'off',]
         subprocess.call(args) 
 
     def on(self):
-        args = ['kasa', '--host', self.IPAddress, '--plug', 'on',]
+        args = ['kasa', '--host', self.settings['WiFiPlugIPAddress'], '--plug', 'on',]
         subprocess.call(args) 
 
     def cycle_plug(self):
