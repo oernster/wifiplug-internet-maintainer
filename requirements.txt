@@ -1,0 +1,16 @@
+altgraph==0.17.2
+anyio==3.4.0
+asyncclick==7.1.2.3
+certifi==2021.10.8
+charset-normalizer==2.0.9
+colorama==0.4.4
+idna==3.3
+importlib-metadata==4.8.2
+macholib==1.15.2
+pyinstaller==4.7
+pyinstaller-hooks-contrib==2021.4
+python-kasa==0.4.0
+requests==2.26.0
+sniffio==1.2.0
+urllib3==1.26.7
+zipp==3.6.0
