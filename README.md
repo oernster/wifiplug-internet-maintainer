@@ -8,6 +8,12 @@ If internet is down, cycle the power to the router (waiting 20 seconds between o
 Increases poll times until 2 hours then sticks at 2 hours until recovery.
 
 The IP address for the WiFi plug needs to be defined.  This is set in settings.json.  Settings.json must be located in the same directory as the main program.
+To obtain the IP address, get the 'Fing' app for your phone.
+Scan for devices.
+Select your wifi plug.
+Select ping.
+The IP address will be displayed under 'Target host'
+Put this in the settings.json file.
 
 # Supported Kasa plugs from TP-Link
 HS100
