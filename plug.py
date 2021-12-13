@@ -11,7 +11,12 @@ from colorama import init, Fore
 init()
 
 def ping():
-    return not os.system('ping %s -n 1' % ('google.com',))
+    ping_success = False
+    try:
+        ping_success = not os.system('ping %s -n 1' % ('google.com',))
+    except Exception as e:
+        print(f"Exception trying to ping: {ping_success}")
+    return ping_success
 
 
 class WiFiPlug(object):
@@ -44,10 +49,14 @@ class WiFiPlug(object):
         subprocess.call(args) 
 
     def cycle_plug(self):
-        self.off()
-        sleep(20)
-        self.on()
-        sleep(self.fail_timeouts[self.fail_count])
+        try:
+            self.off()
+            sleep(20)
+            self.on()
+            sleep(self.fail_timeouts[self.fail_count])
+        except Exception as e:
+            print(f"Exception: {e}")
+            self.cycle_plug()
 
     def _runner(self):
         while True:
