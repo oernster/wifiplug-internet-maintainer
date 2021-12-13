@@ -5,7 +5,7 @@ Note: Designed for Windows.  Ping function needs adjusting for OSX or Linux.
 You'll probably need to buy a wifi router if you don't already have one and hardwire it to your internet service provider's router, 
 then connect all your devices to your purchased wifi router.
 
-If internet is down, cycle the power to the router (waiting 20 seconds between off and on statuses).  
+If internet is down, cycle the power to the router (waiting 20 seconds between off and on states).  
 Increases poll times until 2 hours then sticks at 2 hours until recovery.
 
 The IP address for the WiFi plug needs to be defined.  This is set in settings.json.  Settings.json must be located in the same directory as the main program.
