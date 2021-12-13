@@ -12,7 +12,7 @@ To obtain the IP address, get the 'Fing' app for your phone.
 Scan for devices.
 Select your wifi plug.
 Select ping.
-The IP address will be displayed under 'Target host'
+The IP address will be displayed under 'Target host.'
 Put this in the settings.json file.
 
 # Supported Kasa plugs from TP-Link
