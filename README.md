@@ -1,6 +1,9 @@
 # wifiplug_internet_maintainer v1.2.0
 Polls the internet for alive status and if not cycles a tp-link kasa plug
 
+You'll probably need to buy a wifi router if you don't already have one and hardwire it to your internet service provider's router, 
+then connect all your devices to your purchased wifi router.
+
 If internet is down, cycle the power to the router (waiting 20 seconds between off and on statuses).  
 Increases poll times until 2 hours then sticks at 2 hours until recovery.
 
