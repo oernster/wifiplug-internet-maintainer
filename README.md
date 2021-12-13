@@ -33,6 +33,6 @@ Firstly install Python 3 from python.org. I used Python 3.9.7 but I strongly sus
 
 This will create a dist directory in your repo directory. Copy the settings.json file into the '\dist\plug' directory. Copy the entirety of the plug directory contained within the dist directory (not dist itself) into c:\program files (x86) (you may need to have admin priviledges for this operation).
 
-Press windows key + r and type in 'shell:startup' Insert all programs not already integrated into windows 11's personalisation control panel settings that you want as shortcuts. Create a shortcut for the target 'c:\program files (x86)\plug\plug.exe' and put it in the shell:startup directory.
+Press windows key + r and type in 'shell:startup' Create a shortcut for the target 'c:\program files (x86)\plug\plug.exe' and put it in the shell:startup directory.
 
 Reboot!
