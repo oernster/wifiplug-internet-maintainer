@@ -6,6 +6,16 @@ Increases poll times until 2 hours then sticks at 2 hours until recovery.
 
 The IP address for the WiFi plug needs to be defined.  This is set in settings.json.  Settings.json must be located in the same directory as the main program.
 
+# Supported Kasa plugs from TP-Link
+HS100
+HS103
+HS105
+HS107
+HS110
+KP105
+KP115
+KP401
+
 # Windows setup
 If you want to bundle this into an executable, do the following:
 
