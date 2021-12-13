@@ -1,4 +1,4 @@
-# wifiplug_internet_maintainer v1.2.0
+# wifiplug_internet_maintainer v1.3.0
 Polls the internet for alive status and if not cycles a tp-link kasa plug
 
 You'll probably need to buy a wifi router if you don't already have one and hardwire it to your internet service provider's router, 
