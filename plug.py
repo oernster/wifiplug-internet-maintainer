@@ -16,6 +16,7 @@ def ping():
         ping_success = not os.system('ping %s -n 1' % ('google.com',))
     except Exception as e:
         print(f"Exception trying to ping: {ping_success}")
+        return ping()
     return ping_success
 
 
