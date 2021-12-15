@@ -1,4 +1,4 @@
-# wifiplug_internet_maintainer v1.4.0
+# wifiplug_internet_maintainer v1.5.0
 Polls the internet for alive status and if not cycles a tp-link kasa plug.  
 Note: Designed for Windows.  Ping function needs adjusting for OSX or Linux.
 
