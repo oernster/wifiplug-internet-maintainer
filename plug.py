@@ -3,6 +3,8 @@ import json
 import sys
 from time import sleep
 import os
+import asyncio
+from kasa import SmartPlug
 
 from colorama import init, Fore
 
@@ -40,19 +42,13 @@ class WiFiPlug(object):
             print(Fore.RED, "settings.json file not found!")
             sys.exit()
 
-    def off(self):
-        args = ['kasa', '--host', self.settings['WiFiPlugIPAddress'], '--plug', 'off',]
-        subprocess.call(args) 
-
-    def on(self):
-        args = ['kasa', '--host', self.settings['WiFiPlugIPAddress'], '--plug', 'on',]
-        subprocess.call(args) 
-
-    def cycle_plug(self):
+    async def cycle_plug(self):
         try:
-            self.off()
+            p = SmartPlug(self.settings['WiFiPlugIPAddress'])
+            await p.update()
+            await p.turn_off()
             sleep(20)
-            self.on()
+            await p.turn_on()
             sleep(self.fail_timeouts[self.fail_count])
         except Exception as e:
             print(f"Exception: {e}")
@@ -61,7 +57,12 @@ class WiFiPlug(object):
 
     def _runner(self):
         while True:
-            success = ping()
+            for i in range(0, 5):
+                success = ping()
+                if success:
+                    break
+                else:
+                    sleep(3)
             if success:
                 print(Fore.GREEN, "Internet is ALIVE!")
                 self.fail_count = 0
@@ -71,8 +72,7 @@ class WiFiPlug(object):
                 self.fail_count += 1
                 if self.fail_count > 6:
                     self.fail_count = 6
-                while not self.cycle_plug():
-                    self.cycle_plug()
+                asyncio.run(self.cycle_plug())
             sleep(0.1)
 
 
