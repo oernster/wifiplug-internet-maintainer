@@ -2,7 +2,6 @@ import subprocess
 import json
 import sys
 from time import sleep
-
 import os
 
 from colorama import init, Fore
@@ -57,7 +56,8 @@ class WiFiPlug(object):
             sleep(self.fail_timeouts[self.fail_count])
         except Exception as e:
             print(f"Exception: {e}")
-            self.cycle_plug()
+            return False
+        return True
 
     def _runner(self):
         while True:
@@ -71,7 +71,8 @@ class WiFiPlug(object):
                 self.fail_count += 1
                 if self.fail_count > 6:
                     self.fail_count = 6
-                self.cycle_plug()
+                while not self.cycle_plug():
+                    self.cycle_plug()
             sleep(0.1)
 
 
