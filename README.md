@@ -50,11 +50,11 @@ run 'source venv/bin/activate'
 run 'pip install -r requirements.txt' 
 run 'pyinstaller plug.py'
 
-This will create a dist directory in your repo directory. 
-Copy the plug application from the dist directory to your applications direction on your Mac.  Rename it to routerplug if you want if you have more than one Kasa plug.
+This will create a dist\plug directory in your repo directory. 
+Rename it to routerplug if you want.  For example, if you have more than one Kasa plug.
 
 In System Preferences, select Users and Groups, then select yourself or admin as a user, unlock, enter your password and press the top right button 'Login items.'
-Now with the '+' button, select the plug application.  Relock.
+Now with the '+' button, select the plug application in the dist\plug directory.  Relock.
 
 Reboot!
 
