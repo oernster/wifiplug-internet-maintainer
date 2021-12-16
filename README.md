@@ -1,5 +1,5 @@
 # wifiplug_internet_maintainer v1.9.1
-Pings the google.com to check for internet alive status.  If it's dead after 5 pings, the program power cycles a tp-link kasa plug with a 20s break between off and on.
+Pings google.com to check for internet alive status.  If it's dead after 5 pings, the program power cycles a tp-link kasa plug with a 20s break between off and on.
 
 Supports Windows, Linux and MacOS.
 
