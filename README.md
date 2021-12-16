@@ -1,11 +1,11 @@
 # wifiplug_internet_maintainer v1.9.1
-Polls the internet for alive status and if not cycles a tp-link kasa plug.  
+Pings the google.com to check for internet alive status.  If it's dead after 5 pings, the program power cycles a tp-link kasa plug with a 20s break between off and on.
+
 Supports Windows, Linux and MacOS.
 
 You'll need to buy a wifi router if you don't already have one and hardwire it to your internet service provider's router, then connect all your devices to your purchased wifi router.
 
-If internet is down, cycle the power to the router (waiting 20 seconds between off and on states).  
-Increases poll times until 2 hours then sticks at 2 hours until recovery.
+Increases poll times starting at 5 minutes incrementally until it reaches 2 hours, then sticks at 2 hours until recovery.
 
 Download the Kasa app from your App Store for your mobile.  Define the name of the router plug exactly as 'Router Wifi plug'
 
