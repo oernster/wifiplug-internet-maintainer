@@ -31,12 +31,12 @@ Navigate to the repo directory.
 run 'virtualenv venv' 
 run 'venv\Scripts\activate' 
 run 'pip install -r requirements.txt' 
-run 'pyinstaller plug.py'
+run 'pyinstaller -F plug.py'
 
 This will create a dist directory in your repo directory. 
-Copy the entirety of the plug directory contained within the dist directory (not dist itself) into c:\program files (x86) (you may need to have admin privileges for this operation).
+Create a directory and copy the plug.exe program into c:\program files (x86)\routerplug (you may need to have admin privileges for this operation).
 
-Press windows key + r and type in 'shell:startup' Create a shortcut for the target 'c:\program files (x86)\plug\plug.exe' and put it in the shell:startup directory.
+Press windows key + r and type in 'shell:startup' Create a shortcut for the target 'c:\program files (x86)\routerplug\plug.exe' and put it in the shell:startup directory.
 
 Reboot!
 
@@ -52,12 +52,12 @@ run 'pip install -r requirements.txt'
 run 'pyinstaller -F plug.py'
 
 This will create a dist directory in your repo directory. 
-Rename the plug executable in the folder to routerplug if you want.
+Rename the plug executable in the folder to 'routerplug'
 
-Move plug to your applications folder.
+Copy the routerplug program to your applications folder on your Mac.
 
 In System Preferences, select Users and Groups, then select yourself or admin as a user, unlock, enter your password and press the top right button 'Login items.'
-Now with the '+' button, select the plug application.  Relock.
+Now with the '+' button, select the routerplug application.  Relock.
 
 Reboot!
 
